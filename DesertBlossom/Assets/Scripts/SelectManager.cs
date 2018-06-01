@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterSelect : MonoBehaviour
+public class SelectManager : MonoBehaviour
 {
-
-    private Button selectBtn; // 選択中のボタン
-
+    [SerializeField]Image firstIcon; // 初めに選択状態にするアイコン
+    
     // Use this for initialization
     void Start()
     {
-        selectBtn = GameObject.Find("Canvas/Panel/Button").GetComponent<Button>();
-        selectBtn.Select();
+        firstIcon.GetComponent<CharacterIcon>().setImage();
     }
 
     // Update is called once per frame
