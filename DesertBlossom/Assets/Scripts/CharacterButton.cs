@@ -12,9 +12,9 @@ public class CharacterButton : MonoBehaviour
 
     // 各ボタンのプロパティを作成
     public Button TopBtn { get { return topBtn; } }
-    public Button RightBtn { get { return topBtn; } }
-    public Button BottomBtn { get { return topBtn; } }
-    public Button LeftBtn { get { return topBtn; } }
+    public Button RightBtn { get { return rightBtn; } }
+    public Button BottomBtn { get { return bottomBtn; } }
+    public Button LeftBtn { get { return leftBtn; } }
 
     // Use this for initialization
     void Start()

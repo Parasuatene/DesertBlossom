@@ -68,10 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22150e14616b98c44a3730670a21d1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern_0: {fileID: 0}
-  pattern_1: {fileID: 0}
-  pattern_2: {fileID: 0}
-  pattern_3: {fileID: 0}
 --- !u!114 &114778442136216296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +85,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -98,8 +94,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 84a689ceb85f4db45a988261e834342d,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 84a689ceb85f4db45a988261e834342d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
