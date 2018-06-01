@@ -227,7 +227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1921187150908384, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
       propertyPath: m_Name
-      value: charaBtn (3)
+      value: charaIcon (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8169af37c96e66441ac4e39df78dbbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstIcon: {fileID: 0}
 --- !u!4 &366413723
 Transform:
   m_ObjectHideFlags: 0
@@ -577,7 +578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1921187150908384, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
       propertyPath: m_Name
-      value: charaBtn (2)
+      value: charaIcon (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
@@ -704,7 +705,7 @@ Prefab:
     - target: {fileID: 224356531655264724, guid: 3695f7967414aff4884d6644424f62ba,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224356531655264724, guid: 3695f7967414aff4884d6644424f62ba,
         type: 2}
@@ -773,7 +774,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1921187150908384, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
       propertyPath: m_Name
-      value: charaBtn (1)
+      value: charaIcon (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
