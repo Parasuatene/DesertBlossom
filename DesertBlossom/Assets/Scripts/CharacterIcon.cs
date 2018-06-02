@@ -37,7 +37,7 @@ public class CharacterIcon : MonoBehaviour
 
     }
 
-    // 選択アイコンが切り替わる度にonPlayerを変更。
+    // 選択アイコンが切り替わる度にonPlayerを変更する
     public void setIcon(int playerType, GameObject prevIcon)
     {
         CharacterIcon cIcon = prevIcon.GetComponent<CharacterIcon>();

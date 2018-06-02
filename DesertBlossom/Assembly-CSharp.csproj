@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterIcon.cs" />
     <Compile Include="Assets\Scripts\ModeSelect.cs" />
-    <Compile Include="Assets\Scripts\SelectManager.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <None Include="Assets\Fonts\Orbitron\OFL.txt" />
     <None Include="Assets\Fonts\Aldrich\OFL.txt" />
     <Reference Include="UnityEditor.StandardEvents">
