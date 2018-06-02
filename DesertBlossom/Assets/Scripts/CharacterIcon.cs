@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class CharacterIcon : MonoBehaviour
 {
-    private GameObject topIcon; // 矢印キー"↑"に対応するアイコン
-    private GameObject rightIcon; // 矢印キー"→"に対応するアイコン
-    private GameObject bottomIcon; // 矢印キー"↓"に対応するアイコン
-    private GameObject leftIcon; // 矢印キー"←"に対応するアイコン
+    [SerializeField] GameObject topIcon; // 矢印キー"↑"に対応するアイコン
+    [SerializeField] GameObject rightIcon; // 矢印キー"→"に対応するアイコン
+    [SerializeField] GameObject bottomIcon; // 矢印キー"↓"に対応するアイコン
+    [SerializeField] GameObject leftIcon; // 矢印キー"←"に対応するアイコン
 
     // 各アイコンのプロパティを作成
     public GameObject TopIcon { get { return topIcon; } }
@@ -16,7 +16,7 @@ public class CharacterIcon : MonoBehaviour
     public GameObject BottomIcon { get { return bottomIcon; } }
     public GameObject LeftIcon { get { return leftIcon; } }
 
-    private bool onPlayer1; // プレイヤー1にセットされているかどうか
+    [SerializeField] bool onPlayer1; // プレイヤー1にセットされているかどうか
     private bool onPlayer2; // プレイヤー2にセットされているかどうか
 
     // セットするイメージ画像
@@ -63,17 +63,18 @@ public class CharacterIcon : MonoBehaviour
     // アイコンの画像を適切なものに変更する
     private void setSprite(GameObject changeIcon)
     {
+        CharacterIcon cIcon = changeIcon.GetComponent<CharacterIcon>();
         Image iconImg = changeIcon.GetComponent<Image>();
 
-        if (onPlayer1 == true && onPlayer2 == true) // どちらもが選択状態の場合
+        if (cIcon.onPlayer1 == true && cIcon.onPlayer2 == true) // どちらもが選択状態の場合
         {
             iconImg.sprite = select_3;
         }
-        else if (onPlayer1 == true) // Player1が選択状態の場合
+        else if (cIcon.onPlayer1 == true) // Player1が選択状態の場合
         {
             iconImg.sprite = select_1;
         }
-        else if (onPlayer2 == true) // Player2が選択状態の場合
+        else if (cIcon.onPlayer2 == true) // Player2が選択状態の場合
         {
             iconImg.sprite = select_2;
         }
