@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectManager : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] GameObject currIcon; // 選択状態のアイコン（初期アイコンはインスペクター上から設定）
     private GameObject prevIcon;
