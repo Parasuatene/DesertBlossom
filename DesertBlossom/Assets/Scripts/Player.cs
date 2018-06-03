@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    protected GameObject currIcon;
+    [SerializeField] protected GameObject currIcon; // 選択中のアイコン
     protected GameObject prevIcon;
     protected CharacterIcon cIcon;
     protected int playerNum; // Playerの種類を判別する

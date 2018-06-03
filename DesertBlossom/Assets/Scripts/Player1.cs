@@ -5,12 +5,9 @@ using UnityEngine.UI;
 
 public class Player1 : Player
 {
-    [SerializeField] GameObject initIcon; // 選択状態のアイコン（初期アイコンはインスペクター上から設定）
-
     // Use this for initialization
-    void Start()
+    new void Start()
     {
-        currIcon = initIcon;
         playerNum = 1;
         base.Start(); // 親のStart関数を呼び出し
     }
