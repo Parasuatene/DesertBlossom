@@ -37,6 +37,21 @@ public class CharacterIcon : MonoBehaviour
 
     }
 
+    // アイコンに画像をセットする(初回のみ呼ばれる)
+    public void initSetIcon(int playerNum)
+    {
+        Image iconImg = gameObject.GetComponent<Image>();
+
+        if (playerNum == 1)
+        {
+            iconImg.sprite = select_1;
+        }
+        else if (playerNum == 2)
+        {
+            iconImg.sprite = select_2;
+        }
+    }
+
     // 選択アイコンが切り替わる度にonPlayerを変更する
     public void setIcon(int playerType, GameObject prevIcon)
     {

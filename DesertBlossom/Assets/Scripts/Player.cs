@@ -5,50 +5,30 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] GameObject currIcon; // 選択状態のアイコン（初期アイコンはインスペクター上から設定）
-    private GameObject prevIcon;
-    private CharacterIcon cIcon;
+    protected GameObject currIcon;
+    protected GameObject prevIcon;
+    protected CharacterIcon cIcon;
+    protected int playerNum; // Playerの種類を判別する
 
     // Use this for initialization
-    void Start()
+    protected void Start()
     {
         cIcon = currIcon.GetComponent<CharacterIcon>();
-        currIcon.GetComponent<Image>().sprite = cIcon.select_1; // Playerの選択状態の画像にする
+        cIcon.initSetIcon(playerNum);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // 入力キーに従って、対応するアイコンをセット
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            GameObject topIcon = currIcon.GetComponent<CharacterIcon>().TopIcon;
-            changeIcon(topIcon);
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            GameObject rightIcon = currIcon.GetComponent<CharacterIcon>().RightIcon;
-            changeIcon(rightIcon);
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            GameObject bottomIcon = currIcon.GetComponent<CharacterIcon>().BottomIcon;
-            changeIcon(bottomIcon);
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GameObject leftIcon = currIcon.GetComponent<CharacterIcon>().LeftIcon;
-            changeIcon(leftIcon);
-        }
     }
 
-    private void changeIcon(GameObject typeIcon)
+    protected void changeIcon(GameObject typeIcon)
     {
         if (typeIcon != null)
         {
             prevIcon = currIcon;
             currIcon = typeIcon;
-            currIcon.GetComponent<CharacterIcon>().setIcon(1, prevIcon);
+            currIcon.GetComponent<CharacterIcon>().setIcon(playerNum, prevIcon);
         }
     }
 }
