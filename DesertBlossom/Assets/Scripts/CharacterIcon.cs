@@ -34,7 +34,22 @@ public class CharacterIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (onPlayer1 == true && onPlayer2 == true) // どちらもが選択状態の場合
+        {
+            gameObject.GetComponent<Image>().sprite = select_3;
+        }
+        else if (onPlayer1 == true) // Player1が選択状態の場合
+        {
+            gameObject.GetComponent<Image>().sprite = select_1;
+        }
+        else if (onPlayer2 == true) // Player2が選択状態の場合
+        {
+            gameObject.GetComponent<Image>().sprite = select_2;
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().sprite = select_0;
+        }
     }
 
     // アイコンに画像をセットする(初回のみ呼ばれる)
@@ -44,10 +59,12 @@ public class CharacterIcon : MonoBehaviour
 
         if (playerNum == 1)
         {
+            onPlayer1 = true;
             iconImg.sprite = select_1;
         }
         else if (playerNum == 2)
         {
+            onPlayer2 = true;
             iconImg.sprite = select_2;
         }
     }
@@ -69,33 +86,6 @@ public class CharacterIcon : MonoBehaviour
                 break;
             default:
                 break;
-        }
-
-        setSprite(gameObject);
-        setSprite(prevIcon);
-    }
-
-    // アイコンの画像を適切なものに変更する
-    private void setSprite(GameObject changeIcon)
-    {
-        CharacterIcon cIcon = changeIcon.GetComponent<CharacterIcon>();
-        Image iconImg = changeIcon.GetComponent<Image>();
-
-        if (cIcon.onPlayer1 == true && cIcon.onPlayer2 == true) // どちらもが選択状態の場合
-        {
-            iconImg.sprite = select_3;
-        }
-        else if (cIcon.onPlayer1 == true) // Player1が選択状態の場合
-        {
-            iconImg.sprite = select_1;
-        }
-        else if (cIcon.onPlayer2 == true) // Player2が選択状態の場合
-        {
-            iconImg.sprite = select_2;
-        }
-        else
-        {
-            iconImg.sprite = select_0;
         }
     }
 }
