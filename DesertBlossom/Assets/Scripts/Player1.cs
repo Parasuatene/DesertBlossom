@@ -8,7 +8,7 @@ public class Player1 : Player
     // Use this for initialization
     new void Start()
     {
-        playerNum = 1;
+        playerType = 1;
         base.Start(); // 親のStart関数を呼び出し
     }
 

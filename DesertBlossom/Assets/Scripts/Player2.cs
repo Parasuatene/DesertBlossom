@@ -8,7 +8,7 @@ public class Player2 : Player
     // Use this for initialization
     new void Start()
     {
-        playerNum = 2;
+        playerType = 2;
         base.Start(); // 親のStart関数を呼び出し
     }
 
@@ -16,22 +16,22 @@ public class Player2 : Player
     void Update()
     {
         // 入力キーに従って、対応するアイコンをセット（今後、コントローラーなどで操作する際は入力キーを変更する。）
-        if (Input.GetButtonDown("Player1_Up"))
+        if (Input.GetButtonDown("Player2_Up"))
         {
             GameObject topIcon = currIcon.GetComponent<CharacterIcon>().TopIcon;
             changeIcon(topIcon);
         }
-        else if (Input.GetButtonDown("Player1_Right"))
+        else if (Input.GetButtonDown("Player2_Right"))
         {
             GameObject rightIcon = currIcon.GetComponent<CharacterIcon>().RightIcon;
             changeIcon(rightIcon);
         }
-        else if (Input.GetButtonDown("Player1_Down"))
+        else if (Input.GetButtonDown("Player2_Down"))
         {
             GameObject bottomIcon = currIcon.GetComponent<CharacterIcon>().BottomIcon;
             changeIcon(bottomIcon);
         }
-        else if (Input.GetButtonDown("Player1_Left"))
+        else if (Input.GetButtonDown("Player2_Left"))
         {
             GameObject leftIcon = currIcon.GetComponent<CharacterIcon>().LeftIcon;
             changeIcon(leftIcon);

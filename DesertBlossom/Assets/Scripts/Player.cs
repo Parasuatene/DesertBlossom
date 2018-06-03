@@ -8,13 +8,13 @@ public class Player : MonoBehaviour
     [SerializeField] protected GameObject currIcon; // 選択中のアイコン
     protected GameObject prevIcon;
     protected CharacterIcon cIcon;
-    protected int playerNum; // Playerの種類を判別する
+    protected int playerType; // Playerの種類を判別する
 
     // Use this for initialization
     protected void Start()
     {
         cIcon = currIcon.GetComponent<CharacterIcon>();
-        cIcon.initSetIcon(playerNum);
+        cIcon.initSetIcon(playerType);
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         {
             prevIcon = currIcon;
             currIcon = typeIcon;
-            currIcon.GetComponent<CharacterIcon>().setIcon(playerNum, prevIcon);
+            currIcon.GetComponent<CharacterIcon>().setIcon(playerType, prevIcon);
         }
     }
 }

@@ -16,13 +16,13 @@ public class CharacterIcon : MonoBehaviour
     public GameObject BottomIcon { get { return bottomIcon; } }
     public GameObject LeftIcon { get { return leftIcon; } }
 
-    [SerializeField] bool onPlayer1; // プレイヤー1にセットされているかどうか
+    private bool onPlayer1; // プレイヤー1にセットされているかどうか
     private bool onPlayer2; // プレイヤー2にセットされているかどうか
 
     // セットするイメージ画像
     [SerializeField] Sprite select_0; // デフォルトのとき
-    public Sprite select_1; // プレイヤー1が選択しているとき
-    public Sprite select_2; // プレイヤー2が選択しているとき
+    [SerializeField] Sprite select_1; // プレイヤー1が選択しているとき
+    [SerializeField] Sprite select_2; // プレイヤー2が選択しているとき
     [SerializeField] Sprite select_3; // どちらも選択しているとき
 
     // Use this for initialization
@@ -53,16 +53,16 @@ public class CharacterIcon : MonoBehaviour
     }
 
     // アイコンに画像をセットする(初回のみ呼ばれる)
-    public void initSetIcon(int playerNum)
+    public void initSetIcon(int playerType)
     {
         Image iconImg = gameObject.GetComponent<Image>();
 
-        if (playerNum == 1)
+        if (playerType == 1)
         {
             onPlayer1 = true;
             iconImg.sprite = select_1;
         }
-        else if (playerNum == 2)
+        else if (playerType == 2)
         {
             onPlayer2 = true;
             iconImg.sprite = select_2;
