@@ -234,6 +234,16 @@ Prefab:
       propertyPath: leftIcon
       value: 
       objectReference: {fileID: 758575087}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2087624919}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaName
+      value: Keiko
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -334,7 +344,7 @@ GameObject:
   - component: {fileID: 172322447}
   - component: {fileID: 172322446}
   m_Layer: 5
-  m_Name: Player1_Character
+  m_Name: player1_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,10 +431,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 360237400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51cbe5ec9135184bac57eccd7edf72a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1abebca0a0b49084b9ae56fd109cf540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currIcon: {fileID: 2045261920}
+  currIcon: {fileID: 988747099}
 --- !u!4 &360237402
 Transform:
   m_ObjectHideFlags: 0
@@ -436,7 +446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366413721
 GameObject:
@@ -477,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &416998524
 Prefab:
@@ -581,6 +591,16 @@ Prefab:
       propertyPath: rightIcon
       value: 
       objectReference: {fileID: 841070222}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2087624919}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaName
+      value: Mai
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -730,6 +750,16 @@ Prefab:
       propertyPath: rightIcon
       value: 
       objectReference: {fileID: 988747099}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2087624919}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaName
+      value: Rin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -936,6 +966,16 @@ Prefab:
       propertyPath: rightIcon
       value: 
       objectReference: {fileID: 758575087}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2087624919}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaName
+      value: Ariana
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -955,7 +995,7 @@ GameObject:
   - component: {fileID: 1577647576}
   - component: {fileID: 1577647575}
   m_Layer: 5
-  m_Name: Player2_Character
+  m_Name: Player2_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,6 +1201,7 @@ GameObject:
   - component: {fileID: 2087624922}
   - component: {fileID: 2087624921}
   - component: {fileID: 2087624920}
+  - component: {fileID: 2087624924}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1239,10 +1280,23 @@ RectTransform:
   - {fileID: 172322445}
   - {fileID: 1577647574}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2087624924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087624919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89cf847628806a4faf2025fd085cbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtType1: {fileID: 172322446}
+  txtTYpe2: {fileID: 1577647575}

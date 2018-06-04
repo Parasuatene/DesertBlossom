@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     protected void Start()
     {
         cIcon = currIcon.GetComponent<CharacterIcon>();
+        GameObject.Find("Canvas").GetComponent<UIManager>().setCharaData(playerType, cIcon.charaName);
         cIcon.initSetIcon(playerType);
     }
 

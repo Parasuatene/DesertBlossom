@@ -40,15 +40,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22150e14616b98c44a3730670a21d1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charaName: 
   topIcon: {fileID: 0}
   rightIcon: {fileID: 0}
   bottomIcon: {fileID: 0}
   leftIcon: {fileID: 0}
-  onPlayer1: 0
   select_0: {fileID: 21300000, guid: fc19474ba72e4a8409d4495fd07704e7, type: 3}
   select_1: {fileID: 21300000, guid: 84a689ceb85f4db45a988261e834342d, type: 3}
   select_2: {fileID: 21300000, guid: b9de32f6f2b126f499e5c70af50be5c0, type: 3}
   select_3: {fileID: 21300000, guid: 03fa16ef6e7bf6748b5261700013fb84, type: 3}
+  ui: {fileID: 0}
 --- !u!114 &114600682269277442
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CharacterIcon : MonoBehaviour
 {
+    [SerializeField] public string charaName; // アイコンに対応するキャラの名前
+
     [SerializeField] GameObject topIcon; // 矢印キー"↑"に対応するアイコン
     [SerializeField] GameObject rightIcon; // 矢印キー"→"に対応するアイコン
     [SerializeField] GameObject bottomIcon; // 矢印キー"↓"に対応するアイコン
@@ -24,11 +26,13 @@ public class CharacterIcon : MonoBehaviour
     [SerializeField] Sprite select_1; // プレイヤー1が選択しているとき
     [SerializeField] Sprite select_2; // プレイヤー2が選択しているとき
     [SerializeField] Sprite select_3; // どちらも選択しているとき
+    
+    private UIManager um;
 
     // Use this for initialization
     void Start()
     {
-
+        um = GameObject.Find("Canvas").GetComponent<UIManager>(); // UIManagerを取り付けているオブジェクトをFindしてくる。
     }
 
     // Update is called once per frame
@@ -87,5 +91,7 @@ public class CharacterIcon : MonoBehaviour
             default:
                 break;
         }
+
+        um.setCharaData(playerType, charaName);
     }
 }
