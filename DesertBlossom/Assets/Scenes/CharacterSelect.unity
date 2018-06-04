@@ -244,6 +244,12 @@ Prefab:
       propertyPath: charaName
       value: Keiko
       objectReference: {fileID: 0}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaObj
+      value: 
+      objectReference: {fileID: 1413952065549752, guid: fe08b76a2562f5744b4fadb0356bfc04,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -601,6 +607,12 @@ Prefab:
       propertyPath: charaName
       value: Mai
       objectReference: {fileID: 0}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaObj
+      value: 
+      objectReference: {fileID: 1370909106058364, guid: eeea598cad8364d49b1e0ead44ee9853,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -619,6 +631,46 @@ GameObject:
   m_PrefabParentObject: {fileID: 1921187150908384, guid: 3695f7967414aff4884d6644424f62ba,
     type: 2}
   m_PrefabInternal: {fileID: 1137953802}
+--- !u!1 &898200934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 898200936}
+  - component: {fileID: 898200935}
+  m_Layer: 0
+  m_Name: SelectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &898200935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898200934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49b96955ca58b94ba6eb1820cff36d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &898200936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898200934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &988747099 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1921187150908384, guid: 3695f7967414aff4884d6644424f62ba,
@@ -760,6 +812,12 @@ Prefab:
       propertyPath: charaName
       value: Rin
       objectReference: {fileID: 0}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaObj
+      value: 
+      objectReference: {fileID: 1564133498145864, guid: 7d2d85c8dd1b60542a6cbc323b183f95,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -976,6 +1034,12 @@ Prefab:
       propertyPath: charaName
       value: Ariana
       objectReference: {fileID: 0}
+    - target: {fileID: 114323198320880534, guid: 3695f7967414aff4884d6644424f62ba,
+        type: 2}
+      propertyPath: charaObj
+      value: 
+      objectReference: {fileID: 1790422029793264, guid: c391993c050095b4f839e5d95245a2d8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3695f7967414aff4884d6644424f62ba, type: 2}
   m_IsPrefabParent: 0
@@ -1298,5 +1362,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89cf847628806a4faf2025fd085cbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtType1: {fileID: 172322446}
-  txtTYpe2: {fileID: 1577647575}
+  textType1: {fileID: 172322446}
+  textType2: {fileID: 1577647575}

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    [SerializeField] Text txtType1; // プレイヤー1の選択キャラ名の表示用テキスト
-    [SerializeField] Text txtTYpe2; // プレイヤー2の選択キャラ名の表示用テキスト
+    [SerializeField] Text textType1; // プレイヤー1の選択キャラ名の表示用テキスト
+    [SerializeField] Text textType2; // プレイヤー2の選択キャラ名の表示用テキスト
 
     // Use this for initialization
     void Start()
@@ -21,15 +21,15 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void setCharaData(int playerType, string charaName)
+    public void setCharaData(int playerType, Character character)
     {
         if (playerType == 1)
         {
-            txtType1.text = charaName;
+            textType1.text = character.name;
         }
         else if (playerType == 2)
         {
-            txtTYpe2.text = charaName;
+            textType2.text = character.name;
         }
     }
 }

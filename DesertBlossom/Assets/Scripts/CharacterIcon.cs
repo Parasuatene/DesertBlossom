@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class CharacterIcon : MonoBehaviour
 {
-    [SerializeField] public string charaName; // アイコンに対応するキャラの名前
-
+    [SerializeField] GameObject charaObj; // アイコンに対応するキャラクター
     [SerializeField] GameObject topIcon; // 矢印キー"↑"に対応するアイコン
     [SerializeField] GameObject rightIcon; // 矢印キー"→"に対応するアイコン
     [SerializeField] GameObject bottomIcon; // 矢印キー"↓"に対応するアイコン
     [SerializeField] GameObject leftIcon; // 矢印キー"←"に対応するアイコン
 
     // 各アイコンのプロパティを作成
+    public Character Character { get; private set; }
     public GameObject TopIcon { get { return topIcon; } }
     public GameObject RightIcon { get { return rightIcon; } }
     public GameObject BottomIcon { get { return bottomIcon; } }
@@ -26,13 +26,19 @@ public class CharacterIcon : MonoBehaviour
     [SerializeField] Sprite select_1; // プレイヤー1が選択しているとき
     [SerializeField] Sprite select_2; // プレイヤー2が選択しているとき
     [SerializeField] Sprite select_3; // どちらも選択しているとき
-    
+
     private UIManager um;
+
+    private void Awake()
+    {
+        um = GameObject.Find("Canvas").GetComponent<UIManager>(); // UIManagerを取り付けているオブジェクトをFindしてくる。
+        Character = charaObj.GetComponent<Character>();
+    }
 
     // Use this for initialization
     void Start()
     {
-        um = GameObject.Find("Canvas").GetComponent<UIManager>(); // UIManagerを取り付けているオブジェクトをFindしてくる。
+
     }
 
     // Update is called once per frame
@@ -92,6 +98,6 @@ public class CharacterIcon : MonoBehaviour
                 break;
         }
 
-        um.setCharaData(playerType, charaName);
+        um.setCharaData(playerType, Character.GetComponent<Character>());
     }
 }
