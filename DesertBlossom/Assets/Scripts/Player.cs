@@ -10,10 +10,11 @@ public enum PlayerType
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] PlayerType playerType;
     [SerializeField] protected GameObject currIcon; // 選択中のアイコン
     protected GameObject prevIcon; // 一つ前に選択していたアイコン
     protected CharacterIcon cIcon;
-    protected int playerType; // Playerの種類を判別する
+    [SerializeField] string upBtn, rightBtn, downBtn, leftBtn; // Playerに対応するボタン
 
     public static Character selectChara { get; set; } // 選択したキャラクター
 
@@ -28,6 +29,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 入力キーに従って、対応するアイコンをセット（今後、コントローラーなどで操作する際は入力キーを変更する。）
+        if (Input.GetButtonDown(upBtn))
+        {
+            GameObject topIcon = currIcon.GetComponent<CharacterIcon>().TopIcon;
+            changeIcon(topIcon);
+        }
+        else if (Input.GetButtonDown(rightBtn))
+        {
+            GameObject rightIcon = currIcon.GetComponent<CharacterIcon>().RightIcon;
+            changeIcon(rightIcon);
+        }
+        else if (Input.GetButtonDown(downBtn))
+        {
+            GameObject bottomIcon = currIcon.GetComponent<CharacterIcon>().BottomIcon;
+            changeIcon(bottomIcon);
+        }
+        else if (Input.GetButtonDown(leftBtn))
+        {
+            GameObject leftIcon = currIcon.GetComponent<CharacterIcon>().LeftIcon;
+            changeIcon(leftIcon);
+        }
     }
 
     protected void changeIcon(GameObject typeIcon)

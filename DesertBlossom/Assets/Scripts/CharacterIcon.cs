@@ -63,34 +63,36 @@ public class CharacterIcon : MonoBehaviour
     }
 
     // アイコンに画像をセットする(初回のみ呼ばれる)
-    public void initSetIcon(int playerType)
+    public void initSetIcon(PlayerType playerType)
     {
         Image iconImg = gameObject.GetComponent<Image>();
-
-        if (playerType == 1)
+        
+        switch (playerType)
         {
-            onPlayer1 = true;
-            iconImg.sprite = select_1;
-        }
-        else if (playerType == 2)
-        {
-            onPlayer2 = true;
-            iconImg.sprite = select_2;
+            case PlayerType.Player_1:
+                onPlayer1 = true;
+                break;
+            case PlayerType.Player_2:
+            case PlayerType.Player_CPU:
+                onPlayer2 = true;
+                break;
+            default:
+                break;
         }
     }
 
     // 選択アイコンが切り替わる度にonPlayerを変更する
-    public void setIcon(int playerType, GameObject prevIcon)
+    public void setIcon(PlayerType playerType, GameObject prevIcon)
     {
         CharacterIcon cIcon = prevIcon.GetComponent<CharacterIcon>();
 
         switch (playerType)
         {
-            case 1:
+            case PlayerType.Player_1:
                 onPlayer1 = true;
                 cIcon.onPlayer1 = false;
                 break;
-            case 2:
+            case PlayerType.Player_2:
                 onPlayer2 = true;
                 cIcon.onPlayer2 = false;
                 break;

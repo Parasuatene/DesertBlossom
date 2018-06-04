@@ -21,15 +21,19 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void setCharaData(int playerType, Character character)
+    public void setCharaData(PlayerType playerType, Character character)
     {
-        if (playerType == 1)
+        switch (playerType)
         {
-            textType1.text = character.name;
-        }
-        else if (playerType == 2)
-        {
-            textType2.text = character.name;
+            case PlayerType.Player_1:
+                textType1.text = character.name;
+                break;
+            case PlayerType.Player_2:
+            case PlayerType.Player_CPU:
+                textType2.text = character.name;
+                break;
+            default:
+                break;
         }
     }
 }
