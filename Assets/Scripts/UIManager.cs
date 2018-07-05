@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] Text textType1; // プレイヤー1の選択キャラ名の表示用テキスト
     [SerializeField] Text textType2; // プレイヤー2の選択キャラ名の表示用テキスト
+    [SerializeField] Image imageType1;
+    [SerializeField] Image imageType2;
 
     // Use this for initialization
     void Start()
@@ -26,11 +28,13 @@ public class UIManager : MonoBehaviour
         switch (playerType)
         {
             case PlayerType.Player_1:
-                textType1.text = character.name;
+                textType1.text = character.Name;
+                imageType1.sprite = character.Image;
                 break;
             case PlayerType.Player_2:
             case PlayerType.Player_CPU:
-                textType2.text = character.name;
+                textType2.text = character.Name;
+                imageType2.sprite = character.Image;
                 break;
             default:
                 break;

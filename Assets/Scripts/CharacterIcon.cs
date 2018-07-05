@@ -66,7 +66,7 @@ public class CharacterIcon : MonoBehaviour
     public void initSetIcon(PlayerType playerType)
     {
         Image iconImg = gameObject.GetComponent<Image>();
-        
+
         switch (playerType)
         {
             case PlayerType.Player_1:

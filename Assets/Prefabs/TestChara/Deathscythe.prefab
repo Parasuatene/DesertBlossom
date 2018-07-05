@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65748671368767152}
   - component: {fileID: 114632440283895714}
   m_Layer: 0
-  m_Name: Mai
+  m_Name: Deathscythe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,4 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d58b9f237b152747a1138362d8a6e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Mai
+  name: Deathscythe
+  image: {fileID: 21300000, guid: bd2aa33b988fc3341b9e767ab5cdfeb8, type: 3}

@@ -32,23 +32,19 @@ public class Player : MonoBehaviour
         // 入力キーに従って、対応するアイコンをセット（今後、コントローラーなどで操作する際は入力キーを変更する。）
         if (Input.GetButtonDown(upBtn))
         {
-            GameObject topIcon = currIcon.GetComponent<CharacterIcon>().TopIcon;
-            changeIcon(topIcon);
+            changeIcon(cIcon.TopIcon);
         }
         else if (Input.GetButtonDown(rightBtn))
         {
-            GameObject rightIcon = currIcon.GetComponent<CharacterIcon>().RightIcon;
-            changeIcon(rightIcon);
+            changeIcon(cIcon.RightIcon);
         }
         else if (Input.GetButtonDown(downBtn))
         {
-            GameObject bottomIcon = currIcon.GetComponent<CharacterIcon>().BottomIcon;
-            changeIcon(bottomIcon);
+            changeIcon(cIcon.BottomIcon);
         }
         else if (Input.GetButtonDown(leftBtn))
         {
-            GameObject leftIcon = currIcon.GetComponent<CharacterIcon>().LeftIcon;
-            changeIcon(leftIcon);
+            changeIcon(cIcon.LeftIcon);
         }
     }
 
@@ -58,7 +54,8 @@ public class Player : MonoBehaviour
         {
             prevIcon = currIcon;
             currIcon = typeIcon;
-            currIcon.GetComponent<CharacterIcon>().setIcon(playerType, prevIcon);
+            cIcon = currIcon.GetComponent<CharacterIcon>(); // cIconを更新
+            cIcon.setIcon(playerType, prevIcon);
         }
     }
 }
